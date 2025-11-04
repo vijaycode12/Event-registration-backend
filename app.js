@@ -22,11 +22,12 @@ app.use('/public', express.static('public'));
 const allowedOrigins = [
   'http://127.0.0.1:5500',
   'http://localhost:5500',
-  'https://event-reg-snowy.vercel.app/',
+  'https://event-reg-snowy.vercel.app',
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
+    console.log('CORS Origin:', origin);
     // allow requests with no origin (like mobile apps, Postman, or curl)
     if (!origin) return callback(null, true);
     if (allowedOrigins.indexOf(origin) === -1) {
