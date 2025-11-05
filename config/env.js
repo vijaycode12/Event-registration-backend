@@ -13,6 +13,6 @@ export const {
     QSTASH_URL,
     QSTASH_TOKEN,
     BACKEND_URL,
+    SENDGRID_API_KEY,
     EMAIL_USER,
-    EMAIL_PASS
 } = process.env;
