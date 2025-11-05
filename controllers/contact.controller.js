@@ -29,8 +29,9 @@ export const sendContactEmail = async (req, res) => {
     </div>
   `;
     const mailOptions = {
-      from: email,
+      from: SENDER_EMAIL,
       to: SENDER_EMAIL,
+      replyTo:email,
       subject: `Contact query from ${firstName}`,
       html: htmlContent,
     };
