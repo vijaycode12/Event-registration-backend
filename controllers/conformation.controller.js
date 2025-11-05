@@ -50,7 +50,7 @@ export const sendConfirmationEmail = async (req, res) => {
 
     await sendGridClient.send(mailOptions);
 
-    res.status(200).json({ message: "Confirmation email sent successfully" });
+    res.status(200).json({ message: "Confirmation email sent successfully.Check in spam" });
   } catch (error) {
     console.error("Error sending confirmation email:", error);
     res.status(500).json({ message: "Failed to send confirmation email" });
