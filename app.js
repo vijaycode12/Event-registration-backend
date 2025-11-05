@@ -40,10 +40,6 @@ app.use(cors({
   credentials: true
 }));
 
-app.options('*', cors({
-  origin: allowedOrigins,
-  credentials: true
-}));
 
 // Allow OPTIONS requests to pass through arcjetMiddleware without blocking
 app.use((req, res, next) => {
