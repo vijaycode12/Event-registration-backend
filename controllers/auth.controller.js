@@ -94,7 +94,7 @@ export const logIn = async(req,res,next)=>{
         res.cookie('token', token, {
             httpOnly: true,
             secure: true,   // true if HTTPS in production
-            sameSite: 'none', // exactly this string
+            sameSite:'none', // exactly this string
             maxAge: 1000 * 60 * 60 * 24, // 1 day
         });
 
