@@ -116,9 +116,9 @@ export const signOut = async(req,res,next)=>{
 
     res.clearCookie("token", {
         httpOnly: true,
-        secure: false,
-        sameSite: "lax",
-        path: "/"      
+        secure: true,
+        sameSite: 'none',
+        path: '/',     
     });
     try{
         res.status(200).json({
