@@ -47,7 +47,7 @@ export const sendRemainder = async (req, res) => {
       ).toLocaleString()}.`,
     };
 
-    await sendGridClient.sendMail(mailOptions);
+    await sendGridClient.send(mailOptions);
 
     res.status(200).json({ message: "Reamonder email sent successfully" });
   } catch (error) {

@@ -35,7 +35,7 @@ export const sendContactEmail = async (req, res) => {
       html: htmlContent,
     };
 
-    await sendGridClient.sendMail(mailOptions);
+    await sendGridClient.send(mailOptions);
 
     res
       .status(200)

@@ -48,7 +48,7 @@ export const sendConfirmationEmail = async (req, res) => {
       html: htmlContent,
     };
 
-    await sendGridClient.sendMail(mailOptions);
+    await sendGridClient.send(mailOptions);
 
     res.status(200).json({ message: "Confirmation email sent successfully" });
   } catch (error) {
